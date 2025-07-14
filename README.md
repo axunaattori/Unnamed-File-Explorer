@@ -8,3 +8,7 @@ mkdir build
 cd build
 cmake ..
 make
+```
+
+plans:
+actually add file explorer functions
