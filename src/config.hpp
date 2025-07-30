@@ -17,8 +17,9 @@ namespace Config
             int FG;
         };
 
-        //The first one is for the background and the 2nd one is for the foreground
+        // The first one is for the background and the 2nd one is for the foreground
         // you may also create macros/new integers for colors as you please as it is a c++ header after all :D
+        // set to 0 to choose nothing.
         #define BACKGROUND 0x323232 
 
         inline ColorPair Executable     = { BACKGROUND, 0x00CD00 };
@@ -32,7 +33,7 @@ namespace Config
         inline ColorPair Other          = { BACKGROUND, 0xFFFFFF };
 
         //the color you see behind everything
-        inline int Background           = { BACKGROUND };
+        inline int Background           = BACKGROUND;
 
         // colors for the UI, you can see the UI namespace right below us.
         inline ColorPair Horizontal     = { 0x4B4B4B, 0x4B4BFF };
@@ -56,7 +57,7 @@ namespace Config
 * {
 *   if (keydown('q'))
 *   {
-*       quit
+*       quit();
 *   }
 * }
 * 

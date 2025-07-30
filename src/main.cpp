@@ -78,7 +78,7 @@ int main(int argc, char **argv)
         drawBorder(stdplane);
 
         notcurses_render(nc);
-        usleep(100000);
+        usleep(100000); //add a way to only sleep the required time, like refresh until input or screen update.
     }
 
     notcurses_stop(nc);
