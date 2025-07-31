@@ -12,11 +12,11 @@ void ColorBackground(struct ncplane* plane)
         {
         ncplane_set_bg_rgb(plane, COLOR::Background);
         std::string str;
-        for (int i = 0; i < UFEglobal::cols; i++)
+        for (unsigned int i = 0; i < UFEglobal::cols; i++)
         {
             str += " ";
         }
-        for (int i = 0; i < UFEglobal::rows; i++)
+        for (unsigned int i = 0; i < UFEglobal::rows; i++)
         {
             ncplane_putstr_yx(plane, i, 0, str.c_str()); //i QUITE literally cant find a better way to do this
         }
@@ -26,7 +26,7 @@ void ColorBackground(struct ncplane* plane)
 void drawBorder(struct ncplane* plane)
 {
     std::string str;
-    for (int i = 0; i < UFEglobal::cols; i++)
+    for (unsigned int i = 0; i < UFEglobal::cols; i++)
     {
          str += Config::UserInterface::horizontal;
     }
