@@ -1,12 +1,9 @@
-#include <notcurses/notcurses.h>
-#include <string>
 #include <filesystem>
 #include <vector>
 #include <ncpp/NotCurses.hh>
-#include <unistd.h>
-
 #include "global.hpp"
 #include "config.hpp"
+#include "files.hpp"
 
 void printpath(std::string path, struct ncplane* plane)
 {

@@ -1,11 +1,5 @@
-#include <clocale>
 #include <notcurses/notcurses.h>
-#include <string>
 #include <iostream>
-#include <filesystem>
-#include <cstdlib>
-#include <termios.h>
-#include <unistd.h>
 
 #include "files.hpp"
 #include "ui.hpp"

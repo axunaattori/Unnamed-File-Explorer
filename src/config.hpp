@@ -1,8 +1,8 @@
 #pragma once
+#include "files.hpp"
 
 namespace Config
 {
-    //generally main colors, doesnt count the UI elements
     namespace Colors
     {
         struct ColorPairFile { // will be used for the File type colors, but not right now as ill have to code it
@@ -21,16 +21,17 @@ namespace Config
         // you may also create macros/new integers for colors as you please as it is a c++ header after all :D
         // set to 0 to choose nothing.
         #define BACKGROUND 0x323232 
+        #define BACKGROUND_SELECTED 0x757575
 
-        inline ColorPair Executable     = { BACKGROUND, 0x00CD00 };
-        inline ColorPair Regular        = { BACKGROUND, 0xFFFFFF };
-        inline ColorPair Directory      = { BACKGROUND, 0x0000EE };
-        inline ColorPair NamedPipe      = { BACKGROUND, 0xFFFFFF };
-        inline ColorPair NamedIPCSocket = { BACKGROUND, 0xFFFFFF };
-        inline ColorPair SymbolicLink   = { BACKGROUND, 0xFFFFFF };
-        inline ColorPair Character      = { BACKGROUND, 0xFFFFFF };
-        inline ColorPair Block          = { BACKGROUND, 0xFFFFFF };
-        inline ColorPair Other          = { BACKGROUND, 0xFFFFFF };
+        inline ColorPairFile Executable     = { BACKGROUND, 0x00CD00, BACKGROUND_SELECTED, 0x00CD00};
+        inline ColorPairFile Regular        = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00};
+        inline ColorPairFile Directory      = { BACKGROUND, 0x0000EE, BACKGROUND_SELECTED, 0x00CD00};
+        inline ColorPairFile NamedPipe      = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00};
+        inline ColorPairFile NamedIPCSocket = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00 };
+        inline ColorPairFile SymbolicLink   = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00 };
+        inline ColorPairFile Character      = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00 };
+        inline ColorPairFile Block          = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00 };
+        inline ColorPairFile Other          = { BACKGROUND, 0xFFFFFF, BACKGROUND_SELECTED, 0x00CD00 };
 
         //the color you see behind everything
         inline int Background           = BACKGROUND;
@@ -50,18 +51,17 @@ namespace Config
     
     namespace Input
     {
-    /*
-* planning to add a function where you can add custom keybinds
-* 
-* void processInput()
-* {
-*   if (keydown('q'))
-*   {
-*       quit();
-*   }
-* }
-* 
-* like try to think of it like that, itll will be played on each update
-*/
+        //not added yet
+        /*void processInput()
+        {
+            if(blah blah k down )
+            {
+                FilesCPP::Selected++;
+            }
+            if(blah blah j down )
+            {
+                FilesCPP::Selected--;
+            }
+        }*/
     }
 }

@@ -1,8 +1,8 @@
 #include <ncpp/NotCurses.hh>
-#include <notcurses/notcurses.h>
 #include <string>
 #include "config.hpp"
 #include "global.hpp"
+#include "ui.hpp"
 
 #define COLOR Config::Colors
 
